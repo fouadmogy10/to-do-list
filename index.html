@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learn JavaScript</title>
+    <link rel="stylesheet" href="main.css" />
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+    body {
+        height: 100vh;
+        font-family: Arial, Helvetica, sans-serif;
+        background: rgb(32,142,242);
+        background: linear-gradient(48deg, rgba(32,142,242,1) 12%, rgba(148,32,242,1) 41%, rgba(182,16,75,1) 76%);
+    }
+    .container {
+        width: 500px;
+        margin: 20px auto;
+    }
+    .form {
+        background-color: #eee;
+        border-radius: 6px;
+        padding: 20px;
+        display: flex;
+        align-items: center;
+    }
+    .input {
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 6px;
+        flex: 1;
+    }
+    .input:focus {
+        outline: none;
+    }
+    .add {
+        border: none;
+        background-color: #10c6bd;
+        color: white;
+        padding: 10px;
+        border-radius: 6px;
+        margin-left: 10px;
+        cursor: pointer;
+        transition: all .6s ease-in-out;
+    }
+    .add:hover{
+        background-color: #ffffff;
+        box-shadow: 0px 0px 15px 1px #10c6bd;
+        color: #10c6bd;
+    }
+    .tasks {
+        background-color: #eee;
+        margin-top: 20px;
+        border-radius: 6px;
+        padding: 20px;
+    }
+    .tasks .task {
+        background-color: white;
+        padding: 10px;
+        border-radius: 6px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transition: 0.3s;
+        cursor: pointer;
+        border: 1px solid #ccc;
+      }
+      .tasks .task:not(:last-child) {
+        margin-bottom: 15px;
+      }
+      .tasks .task:hover {
+        background-color: #f7f7f7;
+      }
+      .tasks .task.done {
+        opacity: 0.5;
+      }
+      .tasks .task span:hover{
+        background-color: #ffffff;
+        box-shadow: 0px 0px 15px 1px #10c6bd;
+        color: #10c6bd;
+    }
+      .tasks .task span {
+        font-weight: bold;
+        font-size: 10px;
+        background-color: rgb(6, 174, 203);
+        color: white;
+        padding: 2px 6px;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: all .6s ease-in-out;
+    
+    }
+
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="form">
+        <input type="text" class="input" />
+        <input type="submit" class="add" value="Add Task" />
+      </div>
+      <div class="tasks"></div>
+    </div>
+    <script src="todo-list.js"></script>
+  </body>
+</html>
